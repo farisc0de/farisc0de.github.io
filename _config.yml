@@ -30,7 +30,6 @@ social_media:
   linkedin: farisotaibi
   telegram: fariscode511
   twitter: fariscode_
-  youtube: UCPtkPn6CMSWAAt7ZvD0Ne2A
 
 topics:
   - name: CSS
@@ -40,10 +39,6 @@ topics:
   - name: HTML
     web_url: https://github.com/topics/html
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/html/html.png
-
-  - name: dotNET
-    web_url: https://github.com/topics/dotnet
-    image_url: https://raw.githubusercontent.com/github/explore/93d8a67084f94b2a444e510199a6e7622e5b09a3/topics/dotnet/dotnet.png
 
   - name: PHP
     web_url: https://github.com/topics/php
