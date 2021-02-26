@@ -18,7 +18,7 @@ scope:
 
 projects:
   sort_by: pushed
-  limit: 12
+  limit: 11
   exclude:
     archived: false
     forks: true
