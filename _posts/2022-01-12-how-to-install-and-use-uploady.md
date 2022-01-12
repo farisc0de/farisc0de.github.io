@@ -19,11 +19,9 @@ OK now let us begin installing the software
 
 2. Upload the files to your server and extract them
 
-3. Update your database information in config/config.php
-
-4. After that make sure that the uploads folder has 777 permissions
-
-5. Now you run the installer by visitng /install.php
+4. Update your database information in config/config.php
+5. After that make sure that the uploads folder has 777 permissions
+6. Now you run the installer by visitng /install.php
 
 ![](https://l.top4top.io/p_2203urei31.gif)
 
