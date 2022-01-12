@@ -41,7 +41,7 @@ OK now let us begin installing the software
 
 9. Now you can manage users and files also your website settings from this simple dashboard
 
-![](https://c.top4top.io/p_2203xrjg93.jpg)
+![](https://d.top4top.io/p_2203x1klt1.gif)
 
 10. Enjoy
 
