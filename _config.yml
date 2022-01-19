@@ -18,11 +18,15 @@ scope:
 
 projects:
   sort_by: pushed
-  limit: 11
+  limit: 12
   exclude:
     archived: false
     forks: true
-    projects: "fariscode511.github.io"
+    projects:
+      - "farisc0de.github.io"
+      - "farisc0de"
+      - "MyCV"
+      - "MyCertifications"
 
 social_media:
   #facebook: faris.mohammed511
