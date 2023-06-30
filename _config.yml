@@ -27,6 +27,7 @@ projects:
       - "farisc0de"
       - "resume"
       - "MyCertifications"
+      - "blog"
 
 social_media:
   #facebook: faris.mohammed511
