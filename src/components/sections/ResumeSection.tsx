@@ -11,7 +11,7 @@ export const ResumeSection = () => {
       title: "Preparing PDF...",
       description: "Your resume will open in a new window for downloading.",
     });
-    window.open("/printable-resume", "_blank");
+    window.open("#/printable-resume", "_blank");
   };
 
   return (
