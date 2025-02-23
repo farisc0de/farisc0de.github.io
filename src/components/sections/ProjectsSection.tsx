@@ -9,7 +9,7 @@ const projects = [
     link: "https://github.com/farisc0de/uploady",
   },
   {
-    title: "Mayam Blog",
+    title: "Maryam Blog",
     description: "WordPress Blog for personal use",
     tags: ["WordPress", "PHP", "MySQL"],
     link: "https://maryamfairouz.com",
