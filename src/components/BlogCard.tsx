@@ -25,7 +25,7 @@ export const BlogCard = ({
 }: BlogCardProps) => {
   return (
     <Card className="flex flex-col h-full transition-all hover:shadow-lg">
-      <Link to={`/blog/${slug}`} className="flex flex-col h-full">
+      <Link to={`${slug}`} className="flex flex-col h-full">
         <CardHeader className="flex-none space-y-2">
           <div className="flex flex-wrap gap-2">
             {categories.slice(0, 2).map((category) => (
