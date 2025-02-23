@@ -10,12 +10,12 @@ export const HeroSection = () => {
             src="https://avatars.githubusercontent.com/u/76238196"
             alt="Profile picture"
           />
-          <AvatarFallback>YN</AvatarFallback>
+          <AvatarFallback>FA</AvatarFallback>
         </Avatar>
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             <span className="text-accent">Hello, I'm </span>
-            <span className="gradient-text">Your Name</span>
+            <span className="gradient-text">Faris Alotaibi</span>
           </h1>
           <p className="mx-auto max-w-2xl text-muted-foreground text-balance">
             I am a Senior Software Engineer, Back-End Web Developer, and DevOps Engineer, I also make cool Open-Source projects 😁
