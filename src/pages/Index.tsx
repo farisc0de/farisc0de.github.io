@@ -7,6 +7,9 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { GitHubSection } from "@/components/sections/GitHubSection";
 import { InterestsSection } from "@/components/sections/InterestsSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ResumeSection } from "@/components/sections/ResumeSection";
+import { BlogSection } from "@/components/sections/BlogSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 const Index = () => {
   return (
@@ -20,9 +23,12 @@ const Index = () => {
         <GitHubSection />
         <InterestsSection />
         <ProjectsSection />
+        <BlogSection />
+        <ContactSection />
+        <ResumeSection />
         
         <footer className="text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Faris Alotaibi. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
         </footer>
       </div>
     </div>
