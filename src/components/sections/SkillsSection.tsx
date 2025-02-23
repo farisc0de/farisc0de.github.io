@@ -3,7 +3,7 @@ const skillCategories = [
   {
     name: "Frontend Development",
     skills: [
-      { name: "HTML/CSS", level: 90 },
+      { name: "HTML/CSS", level: 95 },
       { name: "JavaScript", level: 85 },
       { name: "React", level: 88 },
       { name: "TypeScript", level: 82 },
@@ -15,7 +15,7 @@ const skillCategories = [
     skills: [
       { name: "PHP", level: 98 },
       { name: "Node.js", level: 75 },
-      { name: "SQL", level: 78 },
+      { name: "SQL", level: 80 },
       { name: "REST APIs", level: 85 },
       { name: "GraphQL", level: 70 }
     ]
@@ -23,10 +23,10 @@ const skillCategories = [
   {
     name: "Tools & Technologies",
     skills: [
-      { name: "Git", level: 88 },
-      { name: "Docker", level: 75 },
+      { name: "Git", level: 90 },
+      { name: "Docker", level: 85 },
       { name: "AWS", level: 72 },
-      { name: "CI/CD", level: 78 },
+      { name: "CI/CD", level: 95 },
       { name: "Testing", level: 80 }
     ]
   }
