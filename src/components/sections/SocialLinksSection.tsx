@@ -7,7 +7,7 @@ const socialLinks = [
     name: "GitHub",
     icon: Github,
     url: "https://github.com/farisc0de",
-    color: "text-gray-900"
+    color: "text-gray-900 dark:text-gray-100"
   },
   {
     name: "LinkedIn",
@@ -25,7 +25,7 @@ const socialLinks = [
     name: "Dev.to",
     icon: Link,
     url: "https://dev.to/fariscode",
-    color: "text-gray-800"
+    color: "text-gray-800 dark:text-gray-100"
   }
 ];
 
