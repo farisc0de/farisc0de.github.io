@@ -13,8 +13,8 @@ const skillCategories = [
   {
     name: "Backend Development",
     skills: [
-      { name: "Node.js", level: 80 },
-      { name: "Python", level: 75 },
+      { name: "PHP", level: 98 },
+      { name: "Node.js", level: 75 },
       { name: "SQL", level: 78 },
       { name: "REST APIs", level: 85 },
       { name: "GraphQL", level: 70 }
