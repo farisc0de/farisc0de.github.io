@@ -11,19 +11,25 @@ import PrintableResume from "./pages/PrintableResume";
 
 // Prevent theme flash by adding script to document head
 const themeScript = `
-  let isDark;
-  try {
-    isDark = localStorage.getItem('theme') === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-  } catch (e) {
-    isDark = false;
-  }
-  document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+  (function() {
+    let isDark;
+    try {
+      isDark = localStorage.getItem('theme') === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    } catch (e) {
+      console.error('Error setting theme:', e);
+    }
+  })();
 `;
 
-const scriptElement = document.createElement('script');
-scriptElement.textContent = themeScript;
-document.head.appendChild(scriptElement);
+if (!document.getElementById('theme-script')) {
+  const scriptElement = document.createElement('script');
+  scriptElement.id = 'theme-script';
+  scriptElement.textContent = themeScript;
+  document.head.insertBefore(scriptElement, document.head.firstChild);
+}
 
 const queryClient = new QueryClient();
 
@@ -34,6 +40,7 @@ const App = () => (
       enableSystem={true}
       attribute="class"
       disableTransitionOnChange
+      storageKey="theme"
     >
       <TooltipProvider>
         <DarkModeToggle />
