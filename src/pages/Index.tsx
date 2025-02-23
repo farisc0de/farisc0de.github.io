@@ -22,7 +22,7 @@ const Index = () => {
         <ProjectsSection />
         
         <footer className="text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Faris Alotaibi. All rights reserved.</p>
         </footer>
       </div>
     </div>
