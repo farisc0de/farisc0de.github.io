@@ -10,13 +10,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
-   {
-     name: "Sarah Johnson",
-     role: "Senior Frontend Developer at TechCorp",
-     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-     content: "An exceptional colleague who consistently delivers high-quality work. Their attention to detail and problem-solving skills are outstanding.",
-     initials: "SJ"
-   }
+//    {
+//      name: "Sarah Johnson",
+//      role: "Senior Frontend Developer at TechCorp",
+//      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+//      content: "An exceptional colleague who consistently delivers high-quality work. Their attention to detail and problem-solving skills are outstanding.",
+//      initials: "SJ"
+//    }
 //   {
 //     name: "Michael Chen",
 //     role: "Tech Lead at InnovateSoft",
