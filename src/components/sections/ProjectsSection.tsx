@@ -3,22 +3,22 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A brief description of your first project and its key features.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    link: "https://github.com/yourusername/project-one",
+    title: "Uploady File Uploader",
+    description: "A Full-Stack file uploader built with PHP",
+    tags: ["PHP", "MySQL", "Bootstrap"],
+    link: "https://github.com/farisc0de/uploady",
   },
   {
-    title: "Project Two",
-    description: "Description of your second project highlighting its unique aspects.",
-    tags: ["Next.js", "Node.js", "MongoDB"],
-    link: "https://github.com/yourusername/project-two",
+    title: "Mayam Blog",
+    description: "WordPress Blog for personal use",
+    tags: ["WordPress", "PHP", "MySQL"],
+    link: "https://maryamfairouz.com",
   },
   {
-    title: "Project Three",
-    description: "Overview of your third project showcasing your skills and expertise.",
-    tags: ["Vue.js", "Express", "PostgreSQL"],
-    link: "https://github.com/yourusername/project-three",
+    title: "DevOps Implementation",
+    description: "CI/CD pipeline for Misk Foundation projects",
+    tags: ["Azure DevOps", "Yaml", "Docker"],
+    link: "#",
   },
 ];
 
