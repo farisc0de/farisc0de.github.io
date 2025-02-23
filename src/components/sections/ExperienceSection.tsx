@@ -14,7 +14,7 @@ const experiences = [
     title: "Bachelor's in Computer Science",
     company: "Taif University",
     period: "2017 - 2022",
-    description: "Dean's List. Founded the Web Development Club. Led multiple hackathon teams.",
+    description: "Qualifying for the final stage of the Makkah Days competition.",
     icon: GraduationCap,
     type: "education"
   }
