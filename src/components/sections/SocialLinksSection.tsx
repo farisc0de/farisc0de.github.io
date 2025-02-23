@@ -53,7 +53,7 @@ export const SocialLinksSection = () => {
         ))}
       </div>
       <Button variant="default" size="lg" asChild className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
-        <a href="mailto:your.email@example.com" className="gap-2">
+        <a href="mailto:farisksa79@gmail.com" className="gap-2">
           <Mail className="h-4 w-4" />
           Contact Me
         </a>
