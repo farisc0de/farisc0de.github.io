@@ -1,8 +1,9 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 import Index from "./pages/Index";
@@ -33,6 +34,25 @@ if (!document.getElementById('theme-script')) {
 
 const queryClient = new QueryClient();
 
+// Wrapper component to conditionally render DarkModeToggle
+const AppContent = () => {
+  const location = useLocation();
+  const showDarkModeToggle = location.pathname === '/';
+
+  return (
+    <TooltipProvider>
+      {showDarkModeToggle && <DarkModeToggle />}
+      <Toaster />
+      <Sonner />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/printable-resume" element={<PrintableResume />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </TooltipProvider>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider 
@@ -42,18 +62,9 @@ const App = () => (
       disableTransitionOnChange
       storageKey="theme"
     >
-      <TooltipProvider>
-        <DarkModeToggle />
-        <Toaster />
-        <Sonner />
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/printable-resume" element={<PrintableResume />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </HashRouter>
-      </TooltipProvider>
+      <HashRouter>
+        <AppContent />
+      </HashRouter>
     </ThemeProvider>
   </QueryClientProvider>
 );

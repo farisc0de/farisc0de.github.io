@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 
 // Personal Information
@@ -103,15 +102,6 @@ const professionalDevelopment = {
   ]
 };
 
-// Awards
-const awards = [
-  {
-    title: "Misk Values Award",
-    description: "The Misk Values Award is given to employees who exemplify the core values of the Misk Foundation.",
-    date: "Jan 2024"
-  }
-];
-
 // Certifications
 const certifications = [
   "STEP (Score: 91/100)",
@@ -120,181 +110,219 @@ const certifications = [
   "English Proficiency: B2 (EnglishScore)"
 ];
 
+// Awards & Achievements
+const awards = [
+  {
+    title: "Misk Values Award",
+    description: "Recognition for mentoring three interns and enhancing operational workflows"
+  },
+  {
+    title: "DevOps Excellence",
+    description: "Achieved 100% deployment success rate in automated DevOps infrastructure"
+  },
+  {
+    title: "System Reliability Achievement",
+    description: "Improved system reliability by 90% through infrastructure optimization"
+  },
+  {
+    title: "Automation Excellence",
+    description: "Reduced manual intervention time by 85% through Ansible scripting"
+  }
+];
+
 const PrintableResume = () => {
   useEffect(() => {
     window.print();
   }, []);
 
   return (
-    <div className="max-w-[850px] mx-auto p-8 print:p-6 print:mx-0 print:shadow-none bg-white">
-      {/* Personal Information */}
-      <div className="space-y-2 text-center mb-8 print:mb-6 border-b pb-6">
-        <h1 className="text-4xl font-bold text-gray-900 print:text-3xl">{personalInfo.name}</h1>
-        <p className="text-xl text-gray-600 print:text-lg">{personalInfo.title}</p>
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-gray-600 mt-2 print:text-xs">
-          <span>{personalInfo.location}</span>
-          <span className="print:inline">•</span>
-          <a href={`mailto:${personalInfo.email}`} className="hover:text-primary print:hover:text-current">
-            {personalInfo.email}
-          </a>
-          <span className="print:inline">•</span>
-          <a href={`tel:${personalInfo.phone}`} className="hover:text-primary print:hover:text-current">
-            {personalInfo.phone}
-          </a>
-          <span className="print:inline">•</span>
-          <a href={`https://${personalInfo.github}`} className="hover:text-primary print:hover:text-current">
-            {personalInfo.github}
-          </a>
-        </div>
-        <p className="text-sm text-gray-600 mt-4 max-w-3xl mx-auto print:text-xs print:mt-2">
-          {personalInfo.summary}
-        </p>
-      </div>
-
-      {/* Experience */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Professional Experience</h2>
-        <div className="space-y-4 print:space-y-2">
-          {experience.map((exp, index) => (
-            <div key={index}>
-              <div className="flex justify-between items-start mb-1">
-                <div>
-                  <h3 className="font-semibold text-gray-900 print:text-base">{exp.title}</h3>
-                  <p className="text-gray-600 print:text-sm">{exp.company}</p>
-                </div>
-                <span className="text-sm text-gray-500 print:text-xs">{exp.period}</span>
-              </div>
-              <ul className="list-disc list-inside text-sm text-gray-600 pl-4 space-y-1 print:text-xs print:space-y-0.5">
-                {exp.achievements.map((achievement, i) => (
-                  <li key={i}>{achievement}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Education */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Education</h2>
-        <div className="space-y-4 print:space-y-2">
-          {education.map((edu, index) => (
-            <div key={index}>
-              <div className="flex justify-between items-start mb-1">
-                <div>
-                  <h3 className="font-semibold text-gray-900 print:text-base">{edu.degree}</h3>
-                  <p className="text-gray-600 print:text-sm">{edu.school}</p>
-                </div>
-                <span className="text-sm text-gray-500 print:text-xs">{edu.period}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Technical Skills</h2>
-        <div className="grid grid-cols-2 gap-4 text-sm print:gap-2">
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-2 print:text-sm print:mb-1">DevOps & Cloud</h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
-              {skills.devopsCloud.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-2 print:text-sm print:mb-1">Monitoring & Development</h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
-              {skills.monitoringDev.map((skill, index) => (
-                <li key={index}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Projects</h2>
-        <div className="space-y-4 print:space-y-2">
-          {projects.map((project, index) => (
-            <div key={index}>
-              <div className="flex justify-between items-start mb-1">
-                <div>
-                  <h3 className="font-semibold text-gray-900 print:text-base">{project.title}</h3>
-                  {project.description && (
-                    <p className="text-sm text-gray-600 print:text-xs">{project.description}</p>
-                  )}
-                </div>
-                <span className="text-sm text-gray-500 print:text-xs whitespace-nowrap ml-4">{project.period}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Professional Development */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Professional Development</h2>
-        <div className="grid grid-cols-2 gap-4 text-sm print:gap-2">
-          <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
-            {professionalDevelopment.columnOne.map((course, index) => (
-              <li key={index}>{course}</li>
-            ))}
-          </ul>
-          <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
-            {professionalDevelopment.columnTwo.map((course, index) => (
-              <li key={index}>{course}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section className="mb-6 print:mb-4">
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Awards</h2>
-        <div className="space-y-2 print:space-y-1">
-          {awards.map((award, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-gray-900 print:text-base">{award.title}</h3>
-              <p className="text-sm text-gray-600 print:text-xs">{award.description}</p>
-              <p className="text-sm text-gray-500 print:text-xs">{award.date}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Certifications */}
-      <section>
-        <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Certifications</h2>
-        <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
-          {certifications.map((cert, index) => (
-            <li key={index}>{cert}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Print styles */}
-      <style type="text/css" media="print">
+    <div className="print:!bg-white print:!text-black min-h-screen">
+      <style>
         {`
-          @page {
-            margin: 0.4in;
-            size: letter;
-          }
-          
           @media print {
-            html, body {
-              height: 100%;
-              margin: 0;
-              padding: 0;
-              -webkit-print-color-adjust: exact;
-              print-color-adjust: exact;
+            #lovable-badge,
+            .fixed.top-4.right-4 {
+              display: none !important;
+            }
+            
+            html {
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
+            
+            html.dark {
+              color-scheme: light !important;
+            }
+
+            html.dark * {
+              color: black !important;
+              background-color: transparent !important;
+              border-color: #ddd !important;
+            }
+
+            body {
+              background: none !important;
+              padding: 0 !important;
+              margin: 0 !important;
             }
           }
         `}
       </style>
+
+      <div className="max-w-[850px] mx-auto p-8 print:p-6 print:mx-0 print:shadow-none bg-white">
+        {/* Personal Information */}
+        <div className="space-y-2 text-center mb-8 print:mb-6">
+          <h1 className="text-4xl font-bold print:text-3xl text-gray-900">
+            {personalInfo.name}
+          </h1>
+          <p className="text-xl text-gray-600 print:text-lg">{personalInfo.title}</p>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-gray-600 mt-2 print:text-xs">
+            <span>{personalInfo.location}</span>
+            <span>•</span>
+            <a href={`mailto:${personalInfo.email}`} className="hover:text-primary print:text-gray-600 print:no-underline">
+              {personalInfo.email}
+            </a>
+            <span>•</span>
+            <a href={`tel:${personalInfo.phone}`} className="hover:text-primary print:text-gray-600 print:no-underline">
+              {personalInfo.phone}
+            </a>
+            <span>•</span>
+            <a href={`https://${personalInfo.github}`} className="hover:text-primary print:text-gray-600 print:no-underline">
+              {personalInfo.github}
+            </a>
+          </div>
+          <p className="text-sm text-gray-600 mt-4 max-w-3xl mx-auto print:text-xs print:mt-2 leading-relaxed">
+            {personalInfo.summary}
+          </p>
+        </div>
+
+        {/* Experience (Priority 1) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b border-gray-200 mb-4 pb-2 print:text-lg print:mb-2">
+            Professional Experience
+          </h2>
+          <div className="space-y-4 print:space-y-2">
+            {experience.map((exp, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-start mb-1">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 print:text-base">{exp.title}</h3>
+                    <p className="text-gray-600 print:text-sm">{exp.company}</p>
+                  </div>
+                  <span className="text-sm text-gray-500 print:text-xs">{exp.period}</span>
+                </div>
+                <ul className="list-disc list-inside text-sm text-gray-600 pl-4 space-y-1 print:text-xs print:space-y-0.5">
+                  {exp.achievements.map((achievement, i) => (
+                    <li key={i}>{achievement}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Awards & Achievements (Priority 2) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">
+            Awards & Achievements
+          </h2>
+          <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+            {awards.map((award, index) => (
+              <li key={index}>
+                <span className="font-medium">{award.title}:</span> {award.description}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Skills (Priority 3) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Technical Skills</h2>
+          <div className="grid grid-cols-2 gap-4 text-sm print:gap-2">
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2 print:text-sm print:mb-1">DevOps & Cloud</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+                {skills.devopsCloud.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 mb-2 print:text-sm print:mb-1">Monitoring & Development</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+                {skills.monitoringDev.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects (Priority 4) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Projects</h2>
+          <div className="space-y-4 print:space-y-2">
+            {projects.map((project, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-start mb-1">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 print:text-base">{project.title}</h3>
+                    {project.description && (
+                      <p className="text-sm text-gray-600 print:text-xs">{project.description}</p>
+                    )}
+                  </div>
+                  <span className="text-sm text-gray-500 print:text-xs whitespace-nowrap ml-4">{project.period}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Professional Development (Priority 5) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Professional Development</h2>
+          <div className="grid grid-cols-2 gap-4 text-sm print:gap-2">
+            <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+              {professionalDevelopment.columnOne.map((course, index) => (
+                <li key={index}>{course}</li>
+              ))}
+            </ul>
+            <ul className="list-disc list-inside text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+              {professionalDevelopment.columnTwo.map((course, index) => (
+                <li key={index}>{course}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Certifications (Priority 6) */}
+        <section className="mb-6 print:mb-4">
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Certifications</h2>
+          <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 print:text-xs print:space-y-0.5">
+            {certifications.map((cert, index) => (
+              <li key={index}>{cert}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Education (Priority 7) */}
+        <section>
+          <h2 className="text-xl font-bold text-gray-900 border-b mb-4 pb-1 print:text-lg print:mb-2">Education</h2>
+          <div className="space-y-4 print:space-y-2">
+            {education.map((edu, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-start mb-1">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 print:text-base">{edu.degree}</h3>
+                    <p className="text-gray-600 print:text-sm">{edu.school}</p>
+                  </div>
+                  <span className="text-sm text-gray-500 print:text-xs">{edu.period}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
