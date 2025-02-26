@@ -160,16 +160,23 @@ const PrintableResume = () => {
               border-color: #ddd !important;
             }
 
+            @page {
+              size: A4;
+              margin: 0;
+            }
+
             body {
               background: none !important;
               padding: 0 !important;
               margin: 0 !important;
+              width: 210mm;
+              height: 297mm;
             }
           }
         `}
       </style>
 
-      <div className="max-w-[850px] mx-auto p-8 print:p-6 print:mx-0 print:shadow-none bg-white">
+      <div className="max-w-[210mm] mx-auto p-8 print:p-[15mm] print:mx-0 print:shadow-none bg-white min-h-[297mm]">
         {/* Personal Information */}
         <div className="space-y-2 text-center mb-8 print:mb-6">
           <h1 className="text-4xl font-bold print:text-3xl text-gray-900">
