@@ -1,7 +1,4 @@
 import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
 
 // Personal Information
 const personalInfo = {
@@ -154,7 +151,7 @@ const PrintableResume = () => {
           @media print {
             #lovable-badge,
             .fixed.top-4.right-4,
-            .back-button {
+             {
               display: none !important;
             }
             
@@ -188,19 +185,6 @@ const PrintableResume = () => {
           }
         `}
       </style>
-
-      <div className="fixed top-4 left-4 back-button z-50">
-        <Link to="/">
-          <Button
-            size="sm"
-            variant="outline"
-            className="bg-white/80 backdrop-blur shadow-md"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back
-          </Button>
-        </Link>
-      </div>
 
       <div className="max-w-[210mm] mx-auto p-8 print:p-[15mm] print:mx-0 print:shadow-none bg-white min-h-[297mm]">
         {/* Personal Information */}
