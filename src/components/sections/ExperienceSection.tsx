@@ -2,11 +2,19 @@
 import { Briefcase, GraduationCap, Calendar } from "lucide-react";
 
 const experiences = [
-  {
-    title: "Software Engineer",
+    {
+    title: "Sr. DevOps Engineer",
     company: "Misk Foundation",
-    period: "2022 - Present",
-    description: "Full-stack development using TALL stack. Implemented key features for various client projects.",
+    period: "2023 - Present",
+    description: "Responsible for the design, implementation, and maintenance of the foundation's DevOps infrastructure.",
+    icon: Briefcase,
+    type: "work"
+  },
+  {
+    title: "Digital Transformation Specialist",
+    company: "Misk Foundation",
+    period: "2022 - 2023",
+    description: "Worked on various digital transformation projects to help the foundation achieve its goals.",
     icon: Briefcase,
     type: "work"
   },
