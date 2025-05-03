@@ -2,6 +2,14 @@ import { Briefcase, GraduationCap, Calendar } from "lucide-react";
 
 const experiences = [
   {
+    title: "Master of Business Adminstaiton in Business",
+    company: "Augment Business School",
+    period: "2025 - Present",
+    description: "Master of Business Adminstaiton in Business",
+    icon: GraduationCap,
+    type: "education",
+  },
+  {
     title: "Sr. DevOps Engineer",
     company: "Misk Foundation",
     period: "2023 - Present",
