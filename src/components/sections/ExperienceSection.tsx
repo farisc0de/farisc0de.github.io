@@ -19,6 +19,14 @@ const experiences = [
     type: "work",
   },
   {
+    title: "Nanodegree in Full Stack JavaScript Developer",
+    company: "Udacity",
+    period: "2022 - 2023",
+    description: "Nanodegree in Full Stack JavaScript Developer",
+    icon: GraduationCap,
+    type: "education",
+  },
+  {
     title: "Digital Transformation Specialist",
     company: "Misk Foundation",
     period: "2022 - 2023",
