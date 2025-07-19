@@ -1,6 +1,15 @@
 import { Briefcase, GraduationCap, Calendar } from "lucide-react";
 
 const experiences = [
+    {
+    title: "Product Manager",
+    company: "Misk Foundation",
+    period: "2025 - Present",
+    description:
+      "Product Manager for Misk Communities, MGF V-Platform, and Mentorship Platform",
+    icon: Briefcase,
+    type: "work",
+  },
   {
     title: "Master of Business Administration in Business",
     company: "Augment Business School",
@@ -10,9 +19,9 @@ const experiences = [
     type: "education",
   },
   {
-    title: "Sr. DevOps Engineer",
+    title: "Sr. IT Delivery Specilaist",
     company: "Misk Foundation",
-    period: "2023 - Present",
+    period: "2023 - 2025",
     description:
       "Responsible for the design, implementation, and maintenance of the foundation's DevOps infrastructure.",
     icon: Briefcase,
